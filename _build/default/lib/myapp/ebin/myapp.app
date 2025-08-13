@@ -1,0 +1,10 @@
+{application,myapp,
+             [{description,"Minimal Cowboy app"},
+              {vsn,"1.0.0"},
+              {modules,[handler,myapp_app,myapp_sup]},
+              {registered,[myapp_sup]},
+              {applications,[kernel,stdlib,ssl,inets,tls_certificate_check,
+                             telemetry,opentelemetry_api,opentelemetry,
+                             opentelemetry_exporter,cowboy,
+                             opentelemetry_cowboy]},
+              {mod,{myapp_app,[]}}]}.
